@@ -1,0 +1,13 @@
+stages:
+  - build_npm
+cache:
+  paths:
+  - node_modules/
+
+build_react_npm:
+  stage: build_npm
+  script:
+    - npm install
+    - npm run build
+  tags:
+    - react-native
